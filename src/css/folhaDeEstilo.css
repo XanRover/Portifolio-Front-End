@@ -181,3 +181,26 @@ i.menu-mobile {
         margin-left: 0;
     }
 }
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    width: 12px;
+    box-shadow: inset0 0 .3rem #00000050;
+    background-color: #fff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #252c90;
+    border-radius: 20px;
+    border: 3px solid rgb(80, 77, 73);
+  }
