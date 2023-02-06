@@ -63,6 +63,7 @@
 
             </div>
         </section>
+
         <section class="container mt-5" id="sobre-mim">
             <div class="row w-100">
                 <div class="col md-12">
@@ -124,6 +125,7 @@
                 </div>
             </div>
         </section>
+
         <section class="mt-5 cv" id="curriculo">
             <div class="container pb-5">
                 <h2 class="pt-5">Currículo:</h2>
@@ -189,9 +191,77 @@
                 </div>
             </div>
         </section>
-        <section class="mt-5 section-bg" id="projetos">
-            <div class="container pb-5">
-                <h2 class="pt-5">Projetos:</h2>
+
+        <section id="projetos" class="section-bg">
+            <div class="container pb-5 pt-5">
+                <h2 class="pb-4">Projetos</h2>
+                <div id="carouselProjetos" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProjetos" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carocarouselProjetos" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <img style="border-radius: 20px;" src="src/img/Projeto.Super-Mario-Bros.png" class="card-img-top" alt="Projeto-Super-Mario-Bros">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Projeto Super Mario Bros</h5>
+                                            <p class="card-text">
+                                                Projeto desenvolvido em uma maratona gratuita online, somente com HTML, CSS e JS.
+                                            </p>
+                                            <div class="d-flez justify-content-center">
+                                                <a href="" target="-blank" class="btn btn-outline-primary">
+                                                    <i class="bi bi-link-45deg"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img style="border-radius: 30px;" src="src/img/Projeto-Chale-Hotel.png" class="card-img-top" alt="Projeto-Chale-Hotel">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">
+                                                Projeto desenvolvido no curso completo web da udemy, utilizando somente HTML e CSS.
+                                            </p>
+                                            <a href="" target="_blank">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a
+                                                natural lead-in to additional content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
