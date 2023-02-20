@@ -1,5 +1,40 @@
 const menuMobile = document.querySelector('.menu-mobile')
 const body = document.querySelector('body')
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (!link.classList.contains('active')) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            link.classList.add('active');
+        }
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const currentPos = window.pageYOffset;
+
+    navLinks.forEach(link => {
+        const targetId = link.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const rect = targetElement.getBoundingClientRect();
+                const targetTop = rect.top + currentPos;
+                const targetBottom = rect.bottom + currentPos;
+
+                if (currentPos >= targetTop && currentPos < targetBottom) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        }
+    });
+});
+
 
 menuMobile.addEventListener('click', () => {
     menuMobile.classList.contains("bi-list")
@@ -8,7 +43,7 @@ menuMobile.addEventListener('click', () => {
     body.classList.toggle("menu-nav-active");
 });
 
-/*fechar menu quando click*/
+
 const navItem = document.querySelectorAll('.nav-item')
 
 navItem.forEach(item => {
@@ -20,7 +55,7 @@ navItem.forEach(item => {
     })
 })
 
-/*animar os itens na tela que tenham o atributo data-anime */
+
 const item = document.querySelectorAll("[data-anime");
 
 const animeScroll = () => {
@@ -28,13 +63,16 @@ const animeScroll = () => {
     item.forEach((element) => {
         if (windowTop > element.offsetTop) {
             element.classList.add("animate");
-        }else{
+        } else {
             element.classList.remove("animate");
         }
     });
 };
 
 animeScroll();
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", () => {
     animeScroll();
 })
+
+
+
